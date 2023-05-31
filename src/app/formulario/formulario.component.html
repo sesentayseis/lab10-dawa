@@ -1,0 +1,17 @@
+<br>
+<div class="container">
+  <form (submit)="onSubmit()">
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" [(ngModel)]="nombre" name="nombre" required minlength="3" maxlength="50" (input)="onInputChange()">
+
+    
+      <label for="email">Email:</label>
+      <input type="email" id="email" [(ngModel)]="email" name="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" (input)="onInputChange()">
+
+    
+      <button type="submit" class="btn btn-primary" [disabled]="!isFormValid" (click)="onSubmit()">Enviar</button>
+  </form>
+</div>
+
+
+  
